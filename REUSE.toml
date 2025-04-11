@@ -1,0 +1,31 @@
+version = 1
+
+[[annotations]]
+path = ["*.ipynb"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Gergő Pintér"
+SPDX-License-Identifier = "BSD-2-Clause"
+
+[[annotations]]
+path = ["figures/*", "docs/*", "README.md"]
+precedence = "override"
+SPDX-FileCopyrightText = "2025 Gergő Pintér"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = ["**/.gitignore", "pyproject.toml", "poetry.lock"]
+precedence = "override"
+SPDX-FileCopyrightText = "2025 Gergő Pintér"
+SPDX-License-Identifier = "0BSD"
+
+[[annotations]]
+path = "data/budapest.geojson"
+precedence = "override"
+SPDX-FileCopyrightText = "OpenStreetMap contributors"
+SPDX-License-Identifier = "ODbL-1.0"
+
+[[annotations]]
+path = ["data/budapest_h3_*.geojson"]
+precedence = "override"
+SPDX-FileCopyrightText = "2025 Gergő Pintér"
+SPDX-License-Identifier = "ODbL-1.0"
