@@ -13,7 +13,7 @@ SPDX-FileCopyrightText = "2025 Gergő Pintér"
 SPDX-License-Identifier = "CC-BY-4.0"
 
 [[annotations]]
-path = ["**/.gitignore", "pyproject.toml", "poetry.lock"]
+path = ["**/.gitignore", "pyproject.toml", "uv.lock"]
 precedence = "override"
 SPDX-FileCopyrightText = "2025 Gergő Pintér"
 SPDX-License-Identifier = "0BSD"

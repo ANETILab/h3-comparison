@@ -1,27 +1,32 @@
-[tool.poetry]
-name = "H3 comparison"
-version = "0.1.0"
-description = ""
-authors = ["pintergreg <pintergreg@gmail.com>"]
+[project]
+name = "h3_comparison"
+version = "0.2.0"
+description = "H3 comparison"
+authors = [{ name = "pintergreg", email = "pintergreg@gmail.com" }]
+requires-python = ">=3.13"
 readme = "README.md"
-package-mode = false
+dependencies = [
+    "pandas~=2.3",
+    "geopandas~=1.1",
+    "h3>=4.0",
+    "h3pandas>=0.3",
+    "folium>=0.20",
+    "xyzservices>=2025.1",
+    "matplotlib>=3.10.3",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.13"
-pandas = "^2.2"
-geopandas = "^1.0"
-h3 = "^3.1"
-h3pandas = "^0.2.6"
-folium = "^0.19.4"
-xyzservices = "^2025.1"
+[dependency-groups]
+dev = [
+    "ipykernel~=6.29",
+    "pandas-stubs~=2.2",
+]
 
-[tool.poetry.group.dev.dependencies]
-ipykernel = "^6.29"
-pandas-stubs = "^2.2"
+[tool.uv]
+package = false
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
@@ -59,9 +64,6 @@ extend-include = ["*.ipynb"]
 # Same as Black.
 line-length = 88
 indent-width = 4
-
-# # Assume Python 3.8
-# target-version = "py38"
 
 [tool.ruff.lint]
 # Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
